@@ -1,0 +1,5 @@
+<link href='Amaranth.css' rel='stylesheet' type='text/css'>
+<link href='AverageSans-Regular.css' rel='stylesheet' type='text/css'>
+<link href='Gentium Book Basic.css' rel='stylesheet' type='text/css'>
+<link href='Rambla.css' rel='stylesheet' type='text/css'>
+<link href='Rosario.css' rel='stylesheet' type='text/css'>

@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Rosario';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rosario Regular'), local('Rosario-Regular'), url(./Rosario-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Rosario';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rosario Bold'), local('Rosario-Bold'), url(./Rosario-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Rosario';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Rosario Italic'), local('Rosario-Italic'), url(./Rosario-Italic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Rosario';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Rosario Bold Italic'), local('Rosario-BoldItalic'), url(./Rosario-BoldItalic.woff) format('woff');
+}

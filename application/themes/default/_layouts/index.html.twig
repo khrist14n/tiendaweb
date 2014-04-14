@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>    <html class="lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--><html manifest="{{base_url}}public/manifest/manifest.appcache" itemscope itemtype="http://schema.org/Product"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title>
+			{{title}}
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="Pagina web de Dux Sac dot com">
+	    <meta name="author" content="christian portilla pauca">
+	    <link rel="shortcut icon" href="{{base_url}}public/images/icon.png">
+		<link rel="stylesheet" type="text/css" href="{{base_url}}public/fonts/Amaranth.css" />
+		<link rel="stylesheet" type="text/css" href="{{base_url}}public/fonts/Rambla.css" />
+		<link rel="stylesheet" type="text/css" href="{{base_url}}public/lib/bootstrap/css/bootstrap-theme.css" />
+		<link rel="stylesheet" type="text/css" href="{{base_url}}public/lib/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="{{base_url}}public/lib/animatecss/animate.css" />
+		<!-- librerías opcionales que activan el soporte de HTML5 para IE8 -->
+	    <!--[if lt IE 9]>
+	      <script src="{{base_url}}public/lib/html5shiv/html5shiv.js"></script>
+	      <script src="{{base_url}}public/lib/response.js/response.js"></script>
+	      <script src="{{base_url}}public/lib/respond.js/respond.matchmedia.addListener.src.js"></script>
+	      <script src="{{base_url}}public/lib/respond.js/respond.src.js"></script>
+	    <![endif]-->
+		<!--[if lt IE 7]>
+			<script src="{{base_url}}public/lib/iexplore/ie7/min/IE7.js"></script>
+		<![endif]-->
+		<!--[if lt IE 8]>
+			<script src="{{base_url}}public/lib/iexplore/ie7/min/IE8.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="{{base_url}}public/lib/iexplore/ie7/min/IE9.js"></script>
+		<![endif]-->
+		<script>
+			var domain='{{base_url}}';
+		</script>
+	</head>
+	<body>
+
+			{%block content%}
+
+			{%endblock%}
+
+ 	    <script type="text/javascript" src="{{base_url}}public/lib/jquery/jquery-2.0.3.js"></script>
+		<script type="text/javascript" src="{{base_url}}public/lib/raphaeljs/raphael.js"></script>
+		<script type="text/javascript" src="{{base_url}}public/lib/bootstrap/js/bootstrap.js"></script>
+	</body>
+</html>

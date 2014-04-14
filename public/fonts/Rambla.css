@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Rambla';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rambla'), local('Rambla-Regular'), url(./Rambla-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Rambla';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rambla Bold'), local('Rambla-Bold'), url(./Rambla-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Rambla';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Rambla Italic'), local('Rambla-Italic'), url(./Rambla-Italic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Rambla';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Rambla Bold Italic'), local('Rambla-BoldItalic'), url(./Rambla-BoldItalic.woff) format('woff');
+}
