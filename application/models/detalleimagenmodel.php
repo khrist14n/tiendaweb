@@ -1,10 +1,10 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class usuarioModel extends CI_Model {
+class detalleImagenModel extends CI_Model {
 	public $table;
 	public function  __construct(){
 		parent::__construct();
-		$this->table="usuario";
+		$this->table="detalle_imagen";
 	}
 
 	public function getAll(){
@@ -14,9 +14,8 @@ class usuarioModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all[]=array(
 					"id"=>$row->id,
-					"login"=>$row->login,
-					"password"=>$row->password,
-					"email"=>$row->email,
+					"detalle_id"=>$row->detalle_id,
+					"imagen_id"=>$row->imagen_id,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified
@@ -47,9 +46,8 @@ class usuarioModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all=array(
 					"id"=>$row->id,
-					"login"=>$row->login,
-					"password"=>$row->password,
-					"email"=>$row->email,
+					"detalle_id"=>$row->detalle_id,
+					"imagen_id"=>$row->imagen_id,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified
@@ -62,5 +60,5 @@ class usuarioModel extends CI_Model {
 	}
 }
 
-/* End of file usuariomodel.php */
-/* Location: ./application/models/usuariomodel.php */
+/* End of file detalleimagenmodel.php */
+/* Location: ./application/models/detalleimagenmodel.php */

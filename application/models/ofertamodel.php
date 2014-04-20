@@ -14,8 +14,14 @@ class ofertaModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all[]=array(
 					"id"=>$row->id,
-					"categoria"=>$row->categoria,
+					"producto_id"=>$row->producto_id,
+					"nombre"=>$row->nombre,
 					"descripcion"=>$row->descripcion,
+					"marca"=>$row->marca,
+					"precio_real"=>$row->precio_real,
+					"precio_oferta"=>$row->precio_oferta,
+					"descuento"=>$row->descuento,
+					"imagen_id"=>$row->imagen_id,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified
@@ -46,8 +52,14 @@ class ofertaModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all=array(
 					"id"=>$row->id,
-					"categoria"=>$row->categoria,
+					"producto_id"=>$row->producto_id,
+					"nombre"=>$row->nombre,
 					"descripcion"=>$row->descripcion,
+					"marca"=>$row->marca,
+					"precio_real"=>$row->precio_real,
+					"precio_oferta"=>$row->precio_oferta,
+					"descuento"=>$row->descuento,
+					"imagen_id"=>$row->imagen_id,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified

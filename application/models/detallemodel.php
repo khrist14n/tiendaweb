@@ -14,8 +14,10 @@ class detalleModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all[]=array(
 					"id"=>$row->id,
-					"categoria"=>$row->categoria,
+					"oferta_id"=>$row->oferta_id,
+					"nombre"=>$row->nombre,
 					"descripcion"=>$row->descripcion,
+					"informacion"=>$row->informacion,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified
@@ -46,8 +48,10 @@ class detalleModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all=array(
 					"id"=>$row->id,
-					"categoria"=>$row->categoria,
+					"oferta_id"=>$row->oferta_id,
+					"nombre"=>$row->nombre,
 					"descripcion"=>$row->descripcion,
+					"informacion"=>$row->informacion,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified

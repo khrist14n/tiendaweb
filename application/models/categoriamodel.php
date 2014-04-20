@@ -14,8 +14,9 @@ class categoriaModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all[]=array(
 					"id"=>$row->id,
-					"categoria"=>$row->categoria,
+					"nombre"=>$row->nombre,
 					"descripcion"=>$row->descripcion,
+					"imagen_id"=>$row->imagen_id,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified
@@ -46,8 +47,9 @@ class categoriaModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all=array(
 					"id"=>$row->id,
-					"categoria"=>$row->categoria,
+					"nombre"=>$row->nombre,
 					"descripcion"=>$row->descripcion,
+					"imagen_id"=>$row->imagen_id,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified

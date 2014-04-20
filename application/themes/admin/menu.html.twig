@@ -1,0 +1,65 @@
+{% block menu %}
+<div class="row">
+    <div class="col-xs-12">
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="javascript:void(0)">{{logo}}</a>
+                    </div>      
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="{% if(categorias == 'true' ) %}active{% endif %}">
+                                <a href="{{base_url}}admin/categorias">
+                                    Categorias
+                                </a>
+                            </li>
+                            <li class="{% if(subcategorias == 'true' ) %}active{% endif %}">
+                                <a href="{{base_url}}admin/subcategorias">
+                                    Subcategorias
+                                </a>
+                            </li>
+                            <li class="{% if(productos == 'true' ) %}active{% endif %}">
+                                <a href="{{base_url}}admin/productos">
+                                    Productos
+                                </a>
+                            </li>
+                            <li class="{% if(ofertas == 'true' ) %}active{% endif %}">
+                                <a href="{{base_url}}admin/ofertas">
+                                    Ofertas
+                                </a>
+                            </li>
+                            <li class="{% if(detalles == 'true' ) %}active{% endif %}">
+                                <a href="{{base_url}}admin/detalles">
+                                    Detalles de oferta
+                                </a>
+                            </li>
+                            <li class="{% if(imagenes == 'true' ) %}active{% endif %}">
+                                <a href="{{base_url}}admin/imagenes">
+                                    Imagenes
+                                </a>
+                            </li>
+                            <li class="{% if(administradores == 'true' ) %}active{% endif %}">
+                                <a href="{{base_url}}admin/administradores">
+                                    Administradores
+                                </a>
+                            </li>
+                            <li class="{% if(usuarios == 'true' ) %}active{% endif %}">
+                                <a href="{{base_url}}admin/usuarios">
+                                    Usuarios
+                                </a>
+                            </li>
+                        </ul>                    
+                    </div>                    
+                </div>            
+            </nav>            
+        </div>
+    </div>
+</div>
+{% endblock %}

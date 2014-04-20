@@ -14,8 +14,9 @@ class adminModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all[]=array(
 					"id"=>$row->id,
-					"categoria"=>$row->categoria,
-					"descripcion"=>$row->descripcion,
+					"login"=>$row->login,
+					"password"=>$row->password,
+					"email"=>$row->email,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified
@@ -46,8 +47,9 @@ class adminModel extends CI_Model {
 			foreach($data->result() as $row){
 				$all=array(
 					"id"=>$row->id,
-					"categoria"=>$row->categoria,
-					"descripcion"=>$row->descripcion,
+					"login"=>$row->login,
+					"password"=>$row->password,
+					"email"=>$row->email,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified
