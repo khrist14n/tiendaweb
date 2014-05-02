@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 20-04-2014 a las 21:13:21
+-- Tiempo de generación: 02-05-2014 a las 06:35:09
 -- Versión del servidor: 5.5.16
 -- Versión de PHP: 5.3.8
 
@@ -82,7 +82,8 @@ CREATE TABLE IF NOT EXISTS `detalle_imagen` (
   `created` date NOT NULL,
   `modified` date NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `detalle_id` (`detalle_id`,`imagen_id`)
+  KEY `imagen_id` (`imagen_id`),
+  KEY `detalle_id` (`detalle_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -95,12 +96,13 @@ CREATE TABLE IF NOT EXISTS `imagen` (
   `id` int(20) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(200) NOT NULL,
   `extension` varchar(4) NOT NULL,
-  `data` longblob NOT NULL,
+  `data` text NOT NULL,
+  `ruta` text NOT NULL,
   `deleted` tinyint(1) NOT NULL,
   `modified` date NOT NULL,
   `created` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 -- --------------------------------------------------------
 
@@ -177,8 +179,54 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `login` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL,
+  `imagen_id` int(11) NOT NULL,
   `deleted` tinyint(1) NOT NULL,
   `created` date NOT NULL,
   `modified` date NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `imagen_id` (`imagen_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `categoria`
+--
+ALTER TABLE `categoria`
+  ADD CONSTRAINT `categoria_ibfk_1` FOREIGN KEY (`imagen_id`) REFERENCES `imagen` (`id`);
+
+--
+-- Filtros para la tabla `detalle`
+--
+ALTER TABLE `detalle`
+  ADD CONSTRAINT `detalle_ibfk_1` FOREIGN KEY (`oferta_id`) REFERENCES `oferta` (`id`);
+
+--
+-- Filtros para la tabla `detalle_imagen`
+--
+ALTER TABLE `detalle_imagen`
+  ADD CONSTRAINT `detalle_imagen_ibfk_1` FOREIGN KEY (`detalle_id`) REFERENCES `detalle` (`id`),
+  ADD CONSTRAINT `detalle_imagen_ibfk_2` FOREIGN KEY (`imagen_id`) REFERENCES `imagen` (`id`);
+
+--
+-- Filtros para la tabla `oferta`
+--
+ALTER TABLE `oferta`
+  ADD CONSTRAINT `oferta_ibfk_1` FOREIGN KEY (`imagen_id`) REFERENCES `imagen` (`id`),
+  ADD CONSTRAINT `oferta_ibfk_2` FOREIGN KEY (`producto_id`) REFERENCES `producto` (`id`);
+
+--
+-- Filtros para la tabla `producto`
+--
+ALTER TABLE `producto`
+  ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`subcategoria_id`) REFERENCES `subcategoria` (`id`),
+  ADD CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`imagen_id`) REFERENCES `imagen` (`id`);
+
+--
+-- Filtros para la tabla `subcategoria`
+--
+ALTER TABLE `subcategoria`
+  ADD CONSTRAINT `subcategoria_ibfk_1` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`),
+  ADD CONSTRAINT `subcategoria_ibfk_2` FOREIGN KEY (`imagen_id`) REFERENCES `imagen` (`id`);

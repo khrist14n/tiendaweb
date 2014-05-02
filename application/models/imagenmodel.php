@@ -17,6 +17,7 @@ class imagenModel extends CI_Model {
 					"nombre"=>$row->nombre,
 					"extension"=>$row->extension,
 					"data"=>$row->data,
+					"ruta"=>$row->ruta,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified
@@ -25,6 +26,7 @@ class imagenModel extends CI_Model {
 		}
 		return $all;
 	}
+
 	public function create($data){
 		$this->db->insert($this->table,$data);
 		return $this->db->insert_id();
@@ -50,6 +52,7 @@ class imagenModel extends CI_Model {
 					"nombre"=>$row->nombre,
 					"extension"=>$row->extension,
 					"data"=>$row->data,
+					"ruta"=>$row->ruta,
 					"deleted"=>$row->deleted,
 					"created"=>$row->created,
 					"modified"=>$row->modified

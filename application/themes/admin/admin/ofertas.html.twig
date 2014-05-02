@@ -9,8 +9,85 @@
 		<h1>
 			Ofertas
 		</h1>
+		<form action="{{base_url}}admin_oferta/save/" method="post">
+			<div class="form-search">
+				<label>
+					Producto
+				</label>
+				<select name="producto" id="producto" style="width:100%">
+				</select>
+			</div>
+			<div class="form-search">
+				<input type="hidden" name="id" id="id">
+				<label>
+					Nombre
+				</label>
+				<input type="text" name="nombre" id="nombre" style="width:100%">
+			</div>
+			<div class="form-search">
+				<label>
+					Descripcion
+				</label>
+				<textarea id="descripcion" name="descripcion" style="width:100%"></textarea>
+			</div>
+			<div class="form-search">
+				<label>
+					Marca
+				</label>
+				<input type="text" name="marca" id="marca" style="width:100%">
+			</div>
+			<div class="form-search">
+				<label>
+					Precio
+				</label>
+				<input type="text" name="precio" id="precio" style="width:100%">
+			</div>
+			<div class="form-search">
+				<label>
+					Precio Oferta
+				</label>
+				<input type="text" name="precio_oferta" id="precio_oferta" style="width:100%">
+			</div>
+			<div class="form-search">
+				<label>
+					Descuento
+				</label>
+				<input type="text" name="descuento" id="descuento" style="width:100%">
+			</div>
+		</form>
+		<div class="form-search">
+			<label>
+				Imagen
+			</label>
+			<input type="hidden" name="image_id" id="image_id">
+			<form action="{{base_url}}admin_imagen/save/" method="post" enctype="multipart/form-data" id="form_file">
+				<input type="file" id="imagen" name="userfile">
+				 <div id="progress">
+       				<div id="bar">
+       				</div>
+			        <div id="percent">
+			        	0%
+			        </div>
+				</div>
+				<div id="message">
+				</div>
+			</form>
+		</div>
+		<br>
+		<div class="form-search">
+			<input type="submit" name="enviar" class="btn" id="enviar" value="Guardar">
+			<input type="reset" name="cancelar" class="btn"  id="cancelar" value="Cancelar">
+		</div>
 
-		
+
+		<div style="width:100%;" id="grilla" >
+		</div>
+
 	</div>
 
+{% endblock %}
+
+{% block script%}
+	<script type="text/javascript" src="{{base_url}}public/lib/jquery.form/jquery.form.js"></script>
+	<script type="text/javascript" src="{{base_url}}public/js/admin/ofertas.js"></script>
 {% endblock %}

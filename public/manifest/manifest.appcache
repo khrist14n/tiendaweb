@@ -1,5 +1,4 @@
 CACHE MANIFEST
-../../public/images/icon.png
 ../../public/lib/html5shiv/html5shiv.js
 ../../public/lib/response.js/response.js
 ../../public/lib/respond.js/respond.matchmedia.addListener.src.js
@@ -20,50 +19,10 @@ CACHE MANIFEST
 ../../public/lib/bootstrap/css/bootstrap.css
 ../../public/lib/bootstrap/css/bootstrap-theme.css
 ../../public/lib/bootstrap/js/bootstrap.js
-../../public/lib/angularjs/angular.js
 ../../public/lib/jquery/jquery-1.10.2.js
 
 ../../public/lib/raphaeljs/raphael.js
 
-../../public/js/landing.js
-
-../../public/lib/sphere/cvi_sphere_lib.js
-../../public/lib/sphere/sphere.js
-../../public/lib/corner/corner.js
-
-../../public/lib/bootstrap-image-gallery/css/blueimp-gallery.css
-../../public/lib/bootstrap-image-gallery/css/blueimp-gallery-indicator.css
-../../public/lib/bootstrap-image-gallery/css/blueimp-gallery-video.css
-../../public/lib/bootstrap-image-gallery/css/bootstrap-image-gallery.css
-
-../../public/lib/bootstrap-image-gallery/js/blueimp-helper.js
-../../public/lib/bootstrap-image-gallery/js/blueimp-gallery.js
-../../public/lib/bootstrap-image-gallery/js/blueimp-gallery-fullscreen.js
-../../public/lib/bootstrap-image-gallery/js/blueimp-gallery-indicator.js
-../../public/lib/bootstrap-image-gallery/js/jquery.blueimp-gallery.js
-../../public/lib/bootstrap-image-gallery/js/bootstrap-image-gallery.js
-
-../../public/js/gallery.js
-../../public/js/functions.js
-../../public/js/drawing.js
-../../public/images/logoWeb.png
-
-../../public/images/areas/1.jpg
-../../public/images/areas/2.jpg
-../../public/images/areas/3.jpg
-../../public/images/areas/4.jpg
-../../public/images/areas/5.jpg
-
-../../public/images/icons/facebook.png
-../../public/images/icons/twitter.png
-../../public/images/icons/linkedin.png
-
-../../public/images/landing/image1.jpg
-../../public/images/landing/image2.jpg
-../../public/images/landing/image3.jpg
-../../public/images/landing/image4.jpg
-../../public/images/landing/image5.jpg
-../../public/images/landing/image6.jpg
 
 NETWORK:
 *
