@@ -3,13 +3,15 @@
 {% use 'menu.html.twig' %}
 
 {% block content %}
-
+    <script>
+        var base_url='{{base_url}}';
+    </script>
 	<div class="container">
 
 		<h1>
 			Administradores
 		</h1>
-		<form action="{{base_url}}admin_administrador/save/" method="post">
+		<form action="{{base_url}}admin_administrador/save/" method="post" id="form_data">
 			<div class="form-search">
 				<input type="hidden" name="id" id="id">
 				<label>
@@ -28,6 +30,8 @@
 					Email
 				</label>
 				<input type="text" id="email" name="email" style="width:100%">
+                <div id="message">
+				</div>
 			</div>
 			<br>
 			<div class="form-search">

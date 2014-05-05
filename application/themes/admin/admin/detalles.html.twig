@@ -3,13 +3,15 @@
 {% use 'menu.html.twig' %}
 
 {% block content %}
-
+    <script>
+        var base_url='{{base_url}}';
+    </script>
 	<div class="container">
 
 		<h1>
 			Detalles de oferta
 		</h1>
-		<form action="{{base_url}}admin_detalle/save/" method="post">
+		<form action="{{base_url}}admin_detalle/save/" method="post" id="form_data">
 			<div class="form-search">
 				<label>
 					Oferta
@@ -72,4 +74,11 @@
 {% block script%}
 	<script type="text/javascript" src="{{base_url}}public/lib/jquery.form/jquery.form.js"></script>
 	<script type="text/javascript" src="{{base_url}}public/js/admin/detalles.js"></script>
+{% endblock %}
+{% block css %}
+<style>
+	#progress { position:relative; width:400px; border: 1px solid #ddd; padding: 1px; border-radius: 3px; }
+	#bar { background-color: #B4F5B4; width:0%; height:20px; border-radius: 3px; }
+	#percent { position:absolute; display:inline-block; top:3px; left:48%; }
+</style>
 {% endblock %}

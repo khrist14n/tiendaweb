@@ -6,7 +6,28 @@ class subcategoriaModel extends CI_Model {
 		parent::__construct();
 		$this->table="subcategoria";
 	}
-
+	public function getAllByCategoria($id){
+		$this->db->where("categoria_id",$id);
+		$data=$this->db->get($this->table);
+		$all=array();
+		if($data->num_rows()>0){
+			foreach($data->result() as $row){
+				$all[]=array(
+						"id"=>$row->id,
+						"categoria_id"=>$row->categoria_id,
+						"nombre"=>$row->nombre,
+						"descripcion"=>$row->descripcion,
+						"imagen_id"=>$row->imagen_id,
+						"deleted"=>$row->deleted,
+						"created"=>$row->created,
+						"modified"=>$row->modified
+				);
+			}
+			return $all;
+		}else{
+			return FALSE;
+		}
+	}
 	public function getAll(){
 		$data=$this->db->get($this->table);
 		$all=array();

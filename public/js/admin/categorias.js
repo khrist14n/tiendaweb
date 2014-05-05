@@ -1,3 +1,4 @@
+
 var options={
 		beforeSend: function()
 	    {
@@ -22,7 +23,7 @@ var options={
 			var data=$.parseJSON(response.responseText);
 			if(data.success=='true'){
 				$("#message").html("<font color='green'>"+data.message+"</font>");
-				$("#image_id").val(data.id);
+				$("#imagen_id").val(data.id);
 			}else{
 				$("#message").html("<font color='red'> "+data.error.error+"</font>");
 			}
@@ -34,12 +35,11 @@ var options={
 		}
 	};
 
-
 /**
- *
- * @access public
- * @return void
- **/
+*
+* @access public
+* @return void
+**/
 function form_upload(){
 	$("#form_file").ajaxForm(options);
 	$("#imagen").change(
@@ -53,6 +53,77 @@ function form_upload(){
 		}
 	);
 }
+
+var optionsForm={
+		beforeSend: function()
+	    {
+	    },
+	    uploadProgress: function(event, position, total, percentComplete)
+	    {	    
+	    	
+	    },
+	    success: function()
+	    {
+	    	
+	    },
+		complete: function(response)
+		{
+			var data=$.parseJSON(response.responseText);
+			if(data.success=='true'){
+				$("#message").html("<font color='green'>"+data.message+"</font>");
+				clear_form_data();
+			}else{
+				$("#message").html("<font color='red'> "+data.error+"</font>");
+			}
+
+		},
+		error: function()
+		{
+			$("#message").html("<font color='red'> ERROR: unable to send form</font>");
+		}
+	};
+
+var inputs=
+	[
+	 	'id',
+	 	'nombre',
+	 	'descripcion',
+	 	'imagen_id',
+	 	'imagen'	 	
+    ];
+
+/**
+*
+* @access public
+* @return void
+**/
+function clear_form_data(){
+	for(var i in inputs){
+		$("#"+inputs[i]).val('');					
+	}
+}
+
+/**
+*
+* @access public
+* @return void
+**/
+function form_data(){
+	$("#form_data").ajaxForm(optionsForm);
+	$("#enviar").click(
+			function(){
+				$("#form_data").submit();				
+			}
+	);
+	$("#cancelar").click(
+			function(){
+				clear_form_data();
+			}
+	);
+	
+}
+
+
 /**
  *
  * @access public
@@ -60,6 +131,7 @@ function form_upload(){
  **/
 function main(){
 	form_upload();
+	form_data();
 }
 
 $(

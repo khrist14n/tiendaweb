@@ -3,18 +3,28 @@
 {% use 'menu.html.twig' %}
 
 {% block content %}
-
+    <script>
+        var base_url='{{base_url}}';
+    </script>
 	<div class="container">
 
 		<h1>
 			Productos
 		</h1>
-		<form action="{{base_url}}admin_producto/save/" method="post">
+		<form action="{{base_url}}admin_producto/save/" method="post" id="form_data">
+            <div class="form-search">
+				<label>
+					Categoria
+				</label>
+				<select name="categoria_id" id="categoria" style="width:100%">
+
+				</select>
+			</div>
 			<div class="form-search">
 				<label>
 					Sub - Categoria
 				</label>
-				<select name="subcategoria" id="subcategoria" style="width:100%">
+				<select name="subcategoria_id" id="subcategoria" style="width:100%">
 
 				</select>
 			</div>
@@ -30,13 +40,14 @@
 					Descripcion
 				</label>
 				<textarea id="descripcion" name="descripcion" style="width:100%"></textarea>
+                <input type="hidden" name="imagen_id" id="imagen_id">
 			</div>
 		</form>
 		<div class="form-search">
 			<label>
 				Imagen
 			</label>
-			<input type="hidden" name="image_id" id="image_id">
+			
 			<form action="{{base_url}}admin_imagen/save/" method="post" enctype="multipart/form-data" id="form_file">
 				<input type="file" id="imagen" name="userfile">
 				 <div id="progress">
@@ -66,4 +77,11 @@
 {% block script%}
 	<script type="text/javascript" src="{{base_url}}public/lib/jquery.form/jquery.form.js"></script>
 	<script type="text/javascript" src="{{base_url}}public/js/admin/productos.js"></script>
+{% endblock %}
+{% block css %}
+<style>
+	#progress { position:relative; width:400px; border: 1px solid #ddd; padding: 1px; border-radius: 3px; }
+	#bar { background-color: #B4F5B4; width:0%; height:20px; border-radius: 3px; }
+	#percent { position:absolute; display:inline-block; top:3px; left:48%; }
+</style>
 {% endblock %}
